@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html {
+    font-size: clamp(16px, 2.5vmin, 20px);
+    font-family: 'Roboto Mono', sans-serif, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+main > .coluna {
+    display: flex;
+    flex-flow: column nowrap;
+
+    flex: 1;
+}
+
+main > .coluna > *:first-child {
+    margin: 0 0.5rem;
+}
+
+#formulario {
+    display: flex;
+    flex-flow: column;
+
+    padding: .5rem 1rem;
+}
+
+#formulario > input {
+    flex: 1;
+    font-size: 1rem;
+
+    margin-bottom: 1em;
+}
+
+#submit, #editar, #deletar {
+    max-width: 6rem;
+}
+
+.coluna > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    margin-inline-end: 1rem;
+}
+
+#editar, #deletar {
+    font-size: 1rem;
+    flex: .2;
+
+    margin-inline: .5em;
+    padding-inline: 1em;
+}
+
+#deletar {
+    margin-inline-end: 0;
+}
+
+#lista {
+    list-style: none;
+    font-size: 1rem;
+
+    min-height: 3em;
+
+    margin-block: 1rem;
+    margin-inline: 0 1rem;
+    padding-block: .5rem;
+    padding-inline: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+#lista:empty::before {
+    content: 'Não existe nenhum cadastro';
+    font-size: .9em;
+    color: rgba(0, 0, 0, .3);
+
+    position: relative;
+    top: .3em;
+}
+
+#lista > .item-lista {
+    line-height: 1.2;
+    padding-block: 0.2rem;
+}
+
+#lista > .item-lista.selected {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#lista > .item-lista > span {
+    white-space: nowrap;
+}

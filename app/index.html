@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<title>Webservice Bun</title>
+
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<main>
+		<div class="coluna">
+			<form id="formulario" method="post">
+
+				<label for="nome">Nome</label>
+				<input type="text" name="nome" id="nome">
+
+				<label for="idade">Idade</label>
+				<input type="text" name="idade" id="idade">
+
+				<label for="cidade">Cidade</label>
+				<input type="text" name="cidade" id="cidade">
+				<input id="submit" type="submit" value="Cadastrar" disabled>
+			</form>
+		</div>
+		<div class="coluna">
+			<ul id="lista"></ul>
+			<div>
+				<button id="deletar" type="button" disabled>Deletar</button>
+			</div>
+		</div>
+	</main>
+
+	<script src="/main.js"></script>
+</body>
+</html>
